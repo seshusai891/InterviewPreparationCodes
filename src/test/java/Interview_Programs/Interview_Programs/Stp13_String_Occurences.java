@@ -19,8 +19,9 @@ public class Stp13_String_Occurences {
 			else {
 				charCount.put(name.charAt(i), 1);
 			}
-			System.out.println(charCount);
+			
 		}
+		System.out.println(charCount);
 	}
 
 }

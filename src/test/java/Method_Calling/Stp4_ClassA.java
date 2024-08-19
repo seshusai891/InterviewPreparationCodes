@@ -17,7 +17,7 @@ public class Stp4_ClassA {
 	}
 	
 	public static void main(String args[]) {
-		
+		System.out.println("This is parent class");
 	}
 
 }
