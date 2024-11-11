@@ -14,7 +14,12 @@ public class Stp10_String_Reverse {
 			rev=rev+name.charAt(i);//u
 		}
 		System.out.println(rev);
-		
+		if(name.contains(rev)) {
+			System.out.println("palindrome");
+		}
+		else {
+			System.out.println("Not palindrome");
+		}
 		
 	}
 

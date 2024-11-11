@@ -12,6 +12,8 @@ public class Stp18_Occurences_Words_String {
 		String value="Today is today and tomorrow is today and today is tomorrow for holiday";
 		String arr_value[]= {};
 		arr_value=value.split(" ");
+//		multiple arguments using spilt method
+//		String arr[]=stn.split("[ ,"'/]+");
 //		arr=sen.split("[ ,.']+");//split with multiple special characters
 		HashMap<String,Integer> valueCount=new HashMap<String,Integer>();
 		for(int i=0;i<arr_value.length;i++) {
