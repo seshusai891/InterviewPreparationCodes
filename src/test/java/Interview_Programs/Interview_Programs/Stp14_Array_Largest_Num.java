@@ -10,6 +10,7 @@ public class Stp14_Array_Largest_Num {
 //	Method 1
 		int maxnum = arr[0];
 		for(int i=0;i<arr.length;i++) {
+			System.out.println("arr[0] value is "+arr[i]+" and max value is "+ maxnum);
 			if(arr[i]>maxnum) {
 				maxnum=arr[i];
 			}

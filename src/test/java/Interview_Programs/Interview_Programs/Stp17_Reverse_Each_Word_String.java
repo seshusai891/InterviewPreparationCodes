@@ -11,6 +11,7 @@ public class Stp17_Reverse_Each_Word_String {
 		
 		for(String w:arr_value) {
 			String rev_word="";
+			
 		for(int i=w.length()-1;i>=0;i--) {
 			rev_word=rev_word+w.charAt(i);
 		}
