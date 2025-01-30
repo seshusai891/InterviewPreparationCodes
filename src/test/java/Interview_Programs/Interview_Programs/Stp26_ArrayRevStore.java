@@ -7,6 +7,14 @@ public class Stp26_ArrayRevStore {
 	public static void main(String[] args) {
 		int arr[]= {1,2,3,4};
 		
+		int arr1[]= {1,6,2,4};
+		for(int i=0;i<arr1.length/2;i++) {
+			int j=arr1[i];
+			arr1[i]=arr1[arr1.length-i-1];
+			arr1[arr1.length-i-1]=j;
+		}
+		System.out.println(Arrays.toString(arr1));
+//		-------------------------------------------------------------
 		for(int i = 0; i < 2; i++) {
 			int count=arr.length / 2;
             // Swapping the elements
