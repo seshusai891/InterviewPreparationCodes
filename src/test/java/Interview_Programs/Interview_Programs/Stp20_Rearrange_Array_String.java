@@ -27,6 +27,9 @@ public class Stp20_Rearrange_Array_String {
 //				for(int i=0;i<arr.length;i++) {
 //					System.out.println("after reverse sort"+" "+arr[i]);
 //				}
+				
+				
+//				Helps to print in reverse order
 		for(int i=arr.length-1;i>=0;i--) {
 			for(int j=i;j>=0;j--) {
 				String temp=arr[i];
