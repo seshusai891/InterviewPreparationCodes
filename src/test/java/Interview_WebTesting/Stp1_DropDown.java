@@ -13,13 +13,14 @@ import org.openqa.selenium.support.ui.Select;
 public class Stp1_DropDown {
 
 	public static void main(String args[]) {
-		System.setProperty("webdriver.chrome.driver", "D:\\SOFTWARES\\Chrome\\Chrome_Update_100.0.4896.60\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mallamuruvs\\selenium_browsers\\chromedriver-win64\\chromedriver.exe");
+		
 		WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://facebook.com/");
+		driver.get("https://google.com/");
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.xpath("//div[@class=\"_6ltg\"][2]/a")).click();
+		driver.findElement(By.xpath("//a[@aria-label='Sign in']")).click();
 		
 //		WebElement mnth_dropdown = driver.findElement(By.id("month"));
 //		Select mnth_dd=new Select(mnth_dropdown);
@@ -28,30 +29,34 @@ public class Stp1_DropDown {
 //		int total_mnths=mnth_list.size();
 //		
 //		System.out.println(total_mnths);
-		Select dropdown=new Select(driver.findElement(By.xpath("//select[@id=\"month\"]")));
-		List<WebElement> mnth_list=dropdown.getOptions();
-		System.out.println("Size of month list "+mnth_list.size());
-		System.out.println("Month Names are ");
-		for(WebElement ele:mnth_list) {
+		System.out.println("Click on Create Sign up option");
+		driver.findElement(By.xpath("//span[contains(text(),'Create account')]")).click();
+		List<WebElement> accList=driver.findElements(By.xpath("//ul[@aria-label='Create account']/li")); 
+//		Select dropdown=new Select(driver.findElements(By.xpath("//ul[@aria-label='Create account']/li")));
+//		List<WebElement> createAccOptions=accList.getOptions();//personal,child, Business
+		System.out.println("Type of gmail Accounts Size list "+accList.size());
+		System.out.println("Gmail Account opening option types ");
+		for(WebElement ele:accList) {
 			System.out.println(ele.getText());
 			
 //		Checkbox	
-			WebElement chkbox = driver.findElement(By.xpath("//input[@id='isAgeSelected']"));
-		    
-		    if(chkbox.isSelected()) {
-		        
-		        System.out.println("Checkbox is ON");
-		    }else {
-		        
-		        
-		        System.out.println("Checkbox is Off");
-		    }
-		    
-		    WebElement txtbx = driver.findElement(By.id("txtbox"));
-		    txtbx.sendKeys("seshu");
-		    
-		    WebElement txtbx1=driver.findElement(By.id("txtbox"));
-		    js.executeScript("argument[0],value='seshu'",txtbx1);
+//			WebElement chkbox = driver.findElement(By.xpath("//input[@id='isAgeSelected']"));
+//		    
+//		    if(chkbox.isSelected()) {
+//		        
+//		        System.out.println("Checkbox is ON");
+//		    }else {
+//		        
+//		        
+//		        System.out.println("Checkbox is Off");
+//		    }
+//		    
+//		    WebElement txtbx = driver.findElement(By.id("txtbox"));
+//		    txtbx.sendKeys("seshu");
+//		    
+//		    WebElement txtbx1=driver.findElement(By.id("txtbox"));
+//		    txtbx1.sendKeys("seshu");
+//		    js.executeScript("argument[0],value='seshu'",txtbx1);
 		}
 	}
 }
